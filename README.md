@@ -11,10 +11,11 @@ Sequencing library was prepared using NEBNext Ultra II Directional RNA Library P
 - reference genome: GRCh38.p12 with Gencode annotation (release 28)
 #### 4. Gene and transcript counting: RSEM v1.3.1
 #### 5. Statistical analysis using R and Bioconductor 
-- R version 3.5.1 and Bioconductor version 3.7
-
-### Pre-processing
-
+- R v3.5.1 and Bioconductor v3.7
+#### 6. Weighted gene co-expression network analysis (WGCNA)
+- WGCNA v1.64.1 (R package)
+#### 7. Variant calling: GATK4, vcftools, bcftools
+#### 8. Cis-eQTL analysis: FastQTL v2.0
 
 ### 
 
