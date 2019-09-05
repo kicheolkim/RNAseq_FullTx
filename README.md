@@ -8,11 +8,11 @@ Sequencing library was prepared using NEBNext Ultra II Directional RNA Library P
 BASH scripts are prepared for running in the UCSF Wynton clster (https://ucsf-hpc.github.io/wynton/).
 
 
-#### 1. Adaptor trimming and low quality sequence: BBDuk of BBTools v38.05
-#### 2. QC of fastq file: FastQC v0.11.7
-#### 3. Mapping to reference genome: STAR aligner v2.6.0c
+#### 1. Adaptor trimming and low quality sequence: BBDuk of BBTools v38.05 [rawQC-trimming-mapping-counting.sh]
+#### 2. QC of fastq file: FastQC v0.11.7 [rawQC-trimming-mapping-counting.sh]
+#### 3. Mapping to reference genome: STAR aligner v2.6.0c [rawQC-trimming-mapping-counting.sh]
 - reference genome: GRCh38.p12 with Gencode annotation (release 28)
-#### 4. Gene and transcript counting: RSEM v1.3.1
+#### 4. Gene and transcript counting: RSEM v1.3.1 [rawQC-trimming-mapping-counting.sh]
 #### 5. Statistical analysis using R and Bioconductor 
 - R v3.5.1 and Bioconductor v3.7
 #### 6. Weighted gene co-expression network analysis (WGCNA)
