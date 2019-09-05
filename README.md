@@ -5,7 +5,7 @@ Code for full transcript RNA-Seq data analysis of the paper titled "Cell-Type-Sp
 Sequencing library was prepared using NEBNext Ultra II Directional RNA Library Prep Kit for Illumina and NEBNext® rRNA Depletion Kit (Human/Mouse/Rat). Therefore, all options software used here are adapted for stranded RNA-seq reads using dUTP method.
 
 ## Analysis workflow
-BASH scripts are prepared for running in the UCSF Wynton clster (https://ucsf-hpc.github.io/wynton/).
+BASH scripts are prepared for running in the UCSF Wynton cluster (https://ucsf-hpc.github.io/wynton/).
 
 
 #### 1. Adaptor trimming and low quality sequence: BBDuk of BBTools v38.05 [rawQC-trimming-mapping-counting.sh]
