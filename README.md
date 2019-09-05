@@ -18,9 +18,11 @@ BASH scripts are prepared for running in the UCSF Wynton cluster (https://ucsf-h
 #### 6. Weighted gene co-expression network analysis (WGCNA)
 - WGCNA v1.64.1 (R package)
 #### 7. Variant calling: GATK4, vcftools, bcftools
+- BAM files of different cell subset from same subject were merged [VarCall_2_mergeBAM.sh]
+- Variant calling procedure is adapted from GATK Best Practices for variant calling on RNAseq
+  (https://software.broadinstitute.org/gatk/best-practices/workflow?id=11164)
 #### 8. Cis-eQTL analysis: FastQTL v2.0
 
-### 
 
 
 -----
