@@ -7,6 +7,7 @@ Sequencing library was prepared using NEBNext Ultra II Directional RNA Library P
 ## Analysis workflow
 BASH scripts are prepared for running in the UCSF Wynton clster (https://ucsf-hpc.github.io/wynton/).
 
+
 #### 1. Adaptor trimming and low quality sequence: BBDuk of BBTools v38.05
 #### 2. QC of fastq file: FastQC v0.11.7
 #### 3. Mapping to reference genome: STAR aligner v2.6.0c
