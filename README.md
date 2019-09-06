@@ -1,5 +1,5 @@
-# Cell-type-specific RNA-Seq for CD4+, CD8+ T cells and CD14+ monocytes in multiple sclerosis patients
-Code for full transcript RNA-Seq data analysis of the paper titled "Cell-Type-Specific Transcriptomics Identifies Neddylation as a Novel Therapeutic Target in Multiple Sclerosis" (in preparation)
+# Full transcript RNA-Seq data analysis
+Analysis code for cell-type-specific RNA-Seq dataset, which of the paper titled "Cell-Type-Specific Transcriptomics Identifies Neddylation as a Novel Therapeutic Target in Multiple Sclerosis" (in preparation)
 
 ## RNA-Seq library preparation
 Sequencing library was prepared using NEBNext Ultra II Directional RNA Library Prep Kit for Illumina and NEBNext® rRNA Depletion Kit (Human/Mouse/Rat). Therefore, all options software used here are adapted for stranded RNA-seq reads using dUTP method.
