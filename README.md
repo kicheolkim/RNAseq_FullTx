@@ -1,8 +1,8 @@
 # Full transcript RNA-Seq data analysis
-Analysis code for cell-type-specific RNA-Seq dataset, which of the paper titled "Cell-Type-Specific Transcriptomics Identifies Neddylation as a Novel Therapeutic Target in Multiple Sclerosis" (in preparation)
+Analysis code for cell-type-specific RNA-Seq dataset, which of the manuscript titled "Cell-Type-Specific Transcriptomics Identifies Neddylation as a Novel Therapeutic Target in Multiple Sclerosis" (in preparation)
 
-## RNA-Seq library preparation
-Sequencing library was prepared using NEBNext Ultra II Directional RNA Library Prep Kit for Illumina and NEBNext® rRNA Depletion Kit (Human/Mouse/Rat). Therefore, all options software used here are adapted for stranded RNA-seq reads using dUTP method.
+## RNA-Seq library
+Total RNA was purified from FACS-sorted CD4+, CD8+ T cells and CD14+ monocytes from the blood of multiple sclerosis patients. Sequencing libraries were prepared using NEBNext Ultra II Directional RNA Library Prep Kit for Illumina and NEBNext® rRNA Depletion Kit (Human/Mouse/Rat). Therefore, all options software used here are adapted for stranded RNA-seq reads using dUTP method.
 
 ## Analysis workflow
 BASH scripts are script for running of multiple jobs in the UCSF Wynton cluster (https://ucsf-hpc.github.io/wynton/).
@@ -25,4 +25,6 @@ BASH scripts are script for running of multiple jobs in the UCSF Wynton cluster 
 
 
 -----
-By Kicheol Kim (September 2019 updated)
+- September 2019 updated
+By Kicheol Kim, PhD
+Baranzini Lab. (https://github.com/baranzini-lab), Department of Neurology, UCSF
