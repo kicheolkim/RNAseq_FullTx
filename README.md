@@ -27,5 +27,5 @@ BASH scripts are script for running of multiple jobs in the UCSF Wynton cluster 
 -----
 September 2019 updated.
 
-Created by Kicheol Kim, PhD
+Created by Kicheol Kim, PhD.
 Baranzini Lab. (https://github.com/baranzini-lab), Department of Neurology, UCSF
