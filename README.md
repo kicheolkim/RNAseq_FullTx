@@ -5,7 +5,7 @@ Analysis code for cell-type-specific RNA-Seq dataset, which of the manuscript ti
 Total RNA was purified from FACS-sorted CD4+, CD8+ T cells and CD14+ monocytes from the blood of multiple sclerosis patients. Sequencing libraries were prepared using NEBNext Ultra II Directional RNA Library Prep Kit for Illumina and NEBNext® rRNA Depletion Kit (Human/Mouse/Rat). Therefore, all options software used here are adapted for stranded RNA-seq reads using dUTP method.
 
 ## Analysis workflow
-BASH scripts are script for running of multiple jobs in the UCSF Wynton cluster (https://ucsf-hpc.github.io/wynton/).
+BASH scripts are script for running of parallel jobs in the UCSF Wynton cluster (https://ucsf-hpc.github.io/wynton/).
 
 
 #### 1. Adaptor trimming and low quality sequence: BBDuk of BBTools v38.05 [Wynton-cluster/rawQC-trimming-mapping-counting.sh]
