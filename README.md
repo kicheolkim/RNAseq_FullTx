@@ -25,6 +25,5 @@ BASH scripts are script for running of parallel jobs in the UCSF Wynton cluster 
 
 
 -----
-Created by Kicheol Kim, PhD (September 2019 updated)
-
-Baranzini Lab. (https://github.com/baranzini-lab), Department of Neurology, UCSF
+- Created by Kicheol Kim, PhD (September 2019 updated)
+- Baranzini Lab. (https://github.com/baranzini-lab), Department of Neurology, UCSF
