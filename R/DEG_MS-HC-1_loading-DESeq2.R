@@ -25,13 +25,8 @@ metaInfo_base <- read_csv("~/epic.neb/analysis/info_table/EPIC_HCvB_metadata_bas
                                            Sex = col_factor(levels = c("F", "M", "NA"))))
 
 sTable <- merge(libInfo, metaInfo, by.x="HCVB_ID", by.y="HCVB_ID")
-sTable$Subset <- factor(sTable$Subset)
-sTable$prep <- factor(sTable$prep)
-sTable$Lane <- factor(sTable$Lane)
-sTable$DiseaseStatus <- factor(sTable$DiseaseStatus)
-sTable$Sex <- factor(sTable$Sex)
-sTable$Last_Known_Treat_Stat <- factor(sTable$Last_Known_Treat_Stat)
-sTable$DiseaseCourse <- factor(sTable$DiseaseCourse)
+factor_cols <- c("Subset","prep","Lane","DiseaseStatus","Sex","Last_Known_Treat_Stat","DiseaseCourse")
+sTable[factor_cols] <- lapply(sTable[factor_cols], factor)
 
 save(libInfo, metaInfo, metaInfo_base, sTable, file="~/epic.neb/analysis/R_neb/RData/infoTable_updated.RData")
 
