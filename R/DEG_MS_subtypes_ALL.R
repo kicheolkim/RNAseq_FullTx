@@ -39,7 +39,7 @@ sTable.cd4$DiseaseCourse2 <- sTable.cd4$DiseaseCourse
 sTable.cd4[sTable.cd4$DiseaseCourse=="SP",]$DiseaseCourse <- "PP"
 
 factor_cols <- c("Subset","DiseaseCourse","Last_Known_Treat_Stat","DiseaseStatus")
-sTable[factor_cols] <- lapply(sTable[factor_cols], droplevels)
+sTable.cd4[factor_cols] <- lapply(sTable.cd4[factor_cols], droplevels)
 
 
 # file list for rsem
@@ -77,10 +77,8 @@ sTable.cd8 <- subset(sTable, Subset=="CD8" & (Last_Known_Treat_Stat=="TreatmentN
                        (DiseaseCourse=="CIS"|DiseaseCourse=="PP"|DiseaseCourse=="SP"|DiseaseCourse=="RR"))
 sTable.cd8$DiseaseCourse2 <- sTable.cd8$DiseaseCourse
 sTable.cd8[sTable.cd8$DiseaseCourse=="SP",]$DiseaseCourse <- "PP"
-sTable.cd8$DiseaseCourse <- droplevels(sTable.cd8$DiseaseCourse)
-sTable.cd8$Subset <- droplevels(sTable.cd8$Subset)
-sTable.cd8$Last_Known_Treat_Stat <- droplevels(sTable.cd8$Last_Known_Treat_Stat)
-sTable.cd8$DiseaseStatus <- droplevels(sTable.cd8$DiseaseStatus)
+factor_cols <- c("Subset","DiseaseCourse","Last_Known_Treat_Stat","DiseaseStatus")
+sTable.cd8[factor_cols] <- lapply(sTable.cd8[factor_cols], droplevels)
 
 # file list for rsem
 sTable.sub <- sTable.cd8
@@ -116,10 +114,9 @@ sTable.cd14 <- subset(sTable, Subset=="CD14" & (Last_Known_Treat_Stat=="Treatmen
                         (DiseaseCourse=="CIS"|DiseaseCourse=="PP"|DiseaseCourse=="SP"|DiseaseCourse=="RR"))
 sTable.cd14$DiseaseCourse2 <- sTable.cd14$DiseaseCourse
 sTable.cd14[sTable.cd14$DiseaseCourse=="SP",]$DiseaseCourse <- "PP"
-sTable.cd14$DiseaseCourse <- droplevels(sTable.cd14$DiseaseCourse)
-sTable.cd14$Subset <- droplevels(sTable.cd14$Subset)
-sTable.cd14$Last_Known_Treat_Stat <- droplevels(sTable.cd14$Last_Known_Treat_Stat)
-sTable.cd14$DiseaseStatus <- droplevels(sTable.cd14$DiseaseStatus)
+factor_cols <- c("Subset","DiseaseCourse","Last_Known_Treat_Stat","DiseaseStatus")
+sTable.cd14[factor_cols] <- lapply(sTable.cd14[factor_cols], droplevels)
+
 
 # file list for rsem
 sTable.sub <- sTable.cd14
