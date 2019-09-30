@@ -37,10 +37,10 @@ sTable.cd4 <- subset(sTable, Subset=="CD4" & (Last_Known_Treat_Stat=="TreatmentN
                        (DiseaseCourse=="CIS"|DiseaseCourse=="PP"|DiseaseCourse=="SP"|DiseaseCourse=="RR"))
 sTable.cd4$DiseaseCourse2 <- sTable.cd4$DiseaseCourse
 sTable.cd4[sTable.cd4$DiseaseCourse=="SP",]$DiseaseCourse <- "PP"
-sTable.cd4$DiseaseCourse <- droplevels(sTable.cd4$DiseaseCourse)
-sTable.cd4$Subset <- droplevels(sTable.cd4$Subset)
-sTable.cd4$Last_Known_Treat_Stat <- droplevels(sTable.cd4$Last_Known_Treat_Stat)
-sTable.cd4$DiseaseStatus <- droplevels(sTable.cd4$DiseaseStatus)
+
+factor_cols <- c("Subset","DiseaseCourse","Last_Known_Treat_Stat","DiseaseStatus")
+sTable[factor_cols] <- lapply(sTable[factor_cols], droplevels)
+
 
 # file list for rsem
 sTable.sub <- sTable.cd4
