@@ -42,16 +42,12 @@ setwd("~/epic.neb/analysis/results/gene-level/MS_all-HC_updated")
 
 ### Sample Table for baseline
 sTable <- merge(libInfo, metaInfo_base, by.x="HCVB_ID", by.y="HCVB_ID")
-sTable$Subset <- factor(sTable$Subset)
-sTable$prep <- factor(sTable$prep)
-sTable$Lane <- factor(sTable$Lane)
-sTable$DiseaseStatus <- factor(sTable$DiseaseStatus)
-sTable$Sex <- factor(sTable$Sex)
-sTable$Last_Known_Treat_Stat <- factor(sTable$Last_Known_Treat_Stat)
-sTable$DiseaseCourse <- factor(sTable$DiseaseCourse)
-
 sTable$AgeAtExamGrp <- cut(sTable$AgeAtExam, breaks=c(10, 30, 40, 50, 60, 90), labels = c("10_30","30_40","40_50","50_60","60_90"))
 sTable[is.na(sTable$AgeAtExamGrp),]$AgeAtExamGrp <- "30_40"  # missing age considered as average age
+
+factor_cols <- c("Subset","prep","Lane","DiseaseStatus","Sex","Last_Known_Treat_Stat","DiseaseCourse","AgeAtExamGrp")
+sTable[factor_cols] <- lapply(sTable[factor_cols], factor)
+
 
 ### remove outlier samples
 # 49013b-CD4, 75216a_CD4 (CD14 subset), 80517a-CD14, 80617a-CD14
