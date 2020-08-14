@@ -26,15 +26,10 @@ load("~/epic.neb/analysis/R_neb/RData/DESeq2-gene_level-AllCells_MSvsHC_withAge_
 
 
 #####  single gene boxplot  ##### selected genes
-target <- "ENSG00000179388.8_EGR3"
-target <- "ENSG00000181418.7_DDN"
-target <- "ENSG00000233913.7_CTC-575D19.1"
-
-target <- "ENSG00000158985.13_CDC42SE2"
-target <- "ENSG00000144744.16_UBA3"
-target <- "ENSG00000183813.6_CCR4"
+target <- "ENSG00000159593.14_NAE1"
 sig_gene_list <- subset(res, res$gene==target)
 i=1
+ann_colors = list(Status = c(CIS="#fe9929", RMS="#e34a33", HC="#31a354"))
 
 
 setwd("~/epic.neb/analysis/results/gene-level/MS_all-HC_updated/plots/boxplots_untreated")
@@ -66,7 +61,7 @@ for (i in 1:nrow(sig_gene_list)){
   geneCounts <- geneCounts[geneCounts$Status != "MS-treated",]   # remove treated patients
   
   ggplot(geneCounts, aes(x = Status, y = count, color = Status)) + geom_boxplot() + 
-    scale_y_log10() +  geom_beeswarm(cex = 2.5) + 
+    scale_y_log10() +  geom_beeswarm(cex = 2.5) + scale_color_manual(values=c("#fe9929", "#31a354", "#e34a33")) +
     ggtitle(paste0(genename, " (adj. p-val = ",round(res[res$gene==gene,"padj"],digit=6),") in ", cell)) + xlab("") + 
     ylab("log10(DESeq2 normalized count)") + theme_bw()
   # save plot
@@ -105,7 +100,7 @@ for (i in 1:nrow(sig_gene_list)){
   geneCounts <- geneCounts[geneCounts$Status != "MS-treated",]   # remove treated patients
   
   ggplot(geneCounts, aes(x = Status, y = count, color = Status)) + geom_boxplot() + 
-    scale_y_log10() +  geom_beeswarm(cex = 2.5) + 
+    scale_y_log10() +  geom_beeswarm(cex = 2.5) + scale_color_manual(values=c("#fe9929", "#31a354", "#e34a33")) +
     ggtitle(paste0(genename, " (adj. p-val = ",round(res[res$gene==gene,"padj"],digit=6),") in ", cell)) + xlab("") + 
     ylab("log10(DESeq2 normalized count)") + theme_bw()
   # save plot
@@ -143,7 +138,7 @@ for (i in 1:nrow(sig_gene_list)){
   geneCounts <- geneCounts[geneCounts$Status != "MS-treated",]   # remove treated patients
   
   ggplot(geneCounts, aes(x = Status, y = count, color = Status)) + geom_boxplot() + 
-    scale_y_log10() +  geom_beeswarm(cex = 2.5) + 
+    scale_y_log10() +  geom_beeswarm(cex = 2.5) + scale_color_manual(values=c("#fe9929", "#31a354", "#e34a33")) +
     ggtitle(paste0(genename, " (adj. p-val = ",round(res[res$gene==gene,"padj"],digit=6),") in ", cell)) + xlab("") + 
     ylab("log10(DESeq2 normalized count)") + theme_bw()
   # save plot
