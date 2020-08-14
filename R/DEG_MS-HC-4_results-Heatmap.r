@@ -66,9 +66,8 @@ heatmap.expr <- heatmap.expr - rowMeans(heatmap.expr)
 heatmap.expr <- heatmap.expr[,colnames(heatmap.expr) %in% sTable.sub$Sample_ID]
 
 ### untreated vs healthy by adjusted p-value
-select <- subset(res3, baseMean > 3 & padj < 0.05); nrow(select)
-select <- select[order(select$padj),]
-selected.expr <- heatmap.expr[select$gene,]
+select <- subset(res3, baseMean > 3 & padj < 0.05 & gene_type == "protein_coding"); nrow(select)
+elected.expr <- heatmap.expr[select$gene,]
 
 # make heatmap
 row.names(sTable.sub) <- sTable.sub$Sample_ID
